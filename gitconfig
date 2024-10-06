@@ -28,3 +28,5 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[credential]
+	helper = "!f() { /home/vscode/.cursor-server/bin/a846435528b4b760494a836f96f0739889253530/node /tmp/vscode-remote-containers-0e0e8807-324b-4257-8ea5-63cd4706574d.js git-credential-helper $*; }; f"
