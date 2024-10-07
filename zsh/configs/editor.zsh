@@ -1,2 +1,2 @@
-export VISUAL=vim
-export EDITOR=$VISUAL
+export VISUAL=cursor
+export EDITOR=cursor --wait

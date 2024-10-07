@@ -39,3 +39,20 @@ _load_settings "$HOME/.zsh/configs"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+export ZSH="${HOME}/.oh-my-zsh"
+ZSH_THEME="lambda"
+plugins=(
+    alias-tips
+    asdf
+    autojump
+    bundler
+    common-aliases
+    docker
+    docker-compose
+    git
+    git-flow
+    macos
+    rails
+)
+source $ZSH/oh-my-zsh.sh

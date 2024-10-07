@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 # Unix
 alias ll="ls -al"
 alias ln="ln -v"
@@ -25,3 +26,8 @@ alias -- -="cd -"
 if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
 fi
+
+alias er="open -a rubymine"
+alias eg="open -a goland"
+alias lt="ls -ltFh | head -20"
+alias h='history'
