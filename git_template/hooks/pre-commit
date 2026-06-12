@@ -3,5 +3,6 @@
 local_hook="$HOME"/.git_template.local/hooks/pre-commit
 
 if [ -f "$local_hook" ]; then
+  # shellcheck disable=SC1090
   . "$local_hook"
 fi
