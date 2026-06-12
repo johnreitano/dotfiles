@@ -34,9 +34,7 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
+zstyle ':omz:update' mode auto
 export ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="lambda"
 ALIAS_TIPS_DIR="${HOME}/.oh-my-zsh/custom/plugins/alias-tips"
@@ -68,5 +66,15 @@ export LESS=-iXFR # makes git log and other git commands easier to view
 
 export HOMEBREW_NO_ENV_HINTS=true
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# Local config (after asdf so tools like `go` resolve to asdf-managed versions)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+if [ -f "$HOME/.local/bin/env" ]; then
+  . "$HOME/.local/bin/env"
+fi
+

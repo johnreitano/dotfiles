@@ -13,6 +13,9 @@ alias b="bundle"
 alias migrate="bin/rails db:migrate db:rollback && bin/rails db:migrate db:test:prepare"
 alias s="rspec"
 
+# Undo oh-my-zsh common-aliases' interactive rm and cp
+unalias rm cp 2>/dev/null
+
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
